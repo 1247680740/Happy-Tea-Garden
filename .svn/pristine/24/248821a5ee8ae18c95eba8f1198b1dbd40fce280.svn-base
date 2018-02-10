@@ -1,0 +1,155 @@
+namespace views.layers
+{
+    import BaseView = views.base.BaseView;
+    import Sprite = laya.display.Sprite;
+    import Event = laya.events.Event;
+    import LeftTopToolBarUI = ui.gameUI.toolBar.LeftTopToolBarUI;
+    import FriendInfoView = views.player.FriendInfoView;
+    import PlayerInfoCtrl = controllers.player.PlayerInfoCtrl;
+    import GameConfig = configs.GameConfig;
+    import Button = laya.ui.Button;
+
+    /**
+     * 好友UI层（进入好友主页面UI层）
+     */
+    export class FriendUILayer extends BaseView
+    {
+        /**
+         * 好友信息面板
+         */
+        friendInfoView: FriendInfoView;
+         /**
+          * 左上角工具栏
+          */
+        leftTopToolBarView:LeftTopToolBarUI;
+        /**
+         *  底部工具栏
+         */
+        downToolBarView: views.friendList.FriendList_DownToolBarView;
+
+        private static _instance:FriendUILayer;
+
+        constructor()
+        {
+            super();
+
+            // this.pos(50, 10);
+
+            this.friendInfoView = PlayerInfoCtrl.friendInfoView;
+            this.friendInfoView.x=this.friendInfoView.width+15;
+            this.friendInfoView.y=0;
+            this.friendInfoView.visible=true;
+            this.addChild(this.friendInfoView);
+
+            this.leftTopToolBarView = new LeftTopToolBarUI();
+            this.leftTopToolBarView.x = 10;
+            this.leftTopToolBarView.y = this.friendInfoView.height+5;
+            this.addChild(this.leftTopToolBarView);
+            this.leftTopToolBarView.teaRoom.texture = Laya.loader.getRes("gameUI/toolBar/tea_graden.png");
+
+            this.downToolBarView = views.friendList.FriendList_DownToolBarView.instance;
+            this.downToolBarView.x = GameConfig.GAME_WINDOW_WIDTH - this.downToolBarView.width>> 1  //) >> 1;
+			// this.downToolBarView.x -= 50;
+            this.downToolBarView.y = 570;
+            this.addChild(this.downToolBarView);
+
+            this.resetCursorState();
+            Laya.timer.loop(100,this,this.updateCursorPosFn);
+            this.on(Event.CLICK,this,this.toolBarClkedFn);
+        }
+
+        static get instance():FriendUILayer
+		{
+			if(!FriendUILayer._instance)
+                FriendUILayer._instance = new FriendUILayer();
+			return FriendUILayer._instance;
+        }
+
+        init(event?: Event): void
+        {
+            super.init();
+
+        }
+
+        /**
+		 * 切换场景
+		 */
+		toolBarClkedFn(event:Event):void
+		{
+			let curName:string = event.target.name;
+
+			// 茶园
+			if(curName =="teaRoom")
+			{
+				this.loadTeaRoom();
+			} // 炒茶室
+			else if(curName =="friedTea")
+			{
+				this.loadFriedTea();
+			} // 泡茶室
+			else if(curName =="makeTea")
+			{
+                this.loadMakeTea();
+			}
+		}
+
+        /**
+         * 茶园
+         */
+		loadTeaRoom():void
+		{
+            SceneLayerManager.instance.initTeaGardenScene();
+            UILayerManager.getInstance().initTeaGardenUI();
+
+			if(TipLayerManager.tipLayer)
+				TipLayerManager.tipLayer.showMainSceneCursor();
+		}
+
+        /**
+         * 炒茶室
+         */
+		loadFriedTea():void
+		{
+			SceneLayerManager.instance.friedTeaScene();
+			UILayerManager.getInstance().showFriedTeaUI();
+
+            if(TipLayerManager.tipLayer)
+                TipLayerManager.tipLayer.showFriedTeaCursor();
+		}
+
+        /**
+         * 泡茶室
+         */
+        loadMakeTea():void
+        {
+            SceneLayerManager.instance.makeTeaScene();
+            UILayerManager.getInstance().showMakeTeaUI();
+
+            if(TipLayerManager.tipLayer)
+                TipLayerManager.tipLayer.showMakeTeaCursor();
+        }
+
+
+        /**
+         * 复位光标状态（普通鼠标类型）
+         */
+        resetCursorState():void
+        {
+			if(TipLayerManager.tipLayer)
+			{
+				if(!TipLayerManager.tipLayer.getChildByName("sceneCursor"))
+					TipLayerManager.tipLayer.addChild(views.teaRoom.toolBar.DownToolBarView.curShowCursor);
+			}
+            this.downToolBarView.setShowTypeAndState("commonMouse",this.downToolBarView.commonMouse);
+        }
+        /**
+		 * 更新光标位置
+		 */
+		private updateCursorPosFn()
+		{
+			views.teaRoom.toolBar.DownToolBarView.curShowCursor.x = Laya.stage.mouseX;
+			views.teaRoom.toolBar.DownToolBarView.curShowCursor.y = Laya.stage.mouseY;
+		}
+
+    }
+}

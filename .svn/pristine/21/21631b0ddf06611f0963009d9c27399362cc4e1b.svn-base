@@ -1,0 +1,15 @@
+{
+    "typescript.tsdk": "node_modules/typescript/lib",
+
+    // 定义函数的左大括号是否放置在新的一行。
+    "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
+    // 定义控制块的左括号是否放置在新的一行。
+    "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+    // 定义函数的左大括号是否放置在新的一行。
+    "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
+    // 定义控制块的左括号是否放置在新的一行。
+    "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+    // 启用后，将在保存文件时剪裁尾随空格。
+    "files.trimTrailingWhitespace": true
+
+}

@@ -1,0 +1,184 @@
+namespace controllers.teaRoom
+{
+	import Event = laya.events.Event;
+	import CropModel = models.teaRoom.crop.CropModel;
+	import TeaGardenModel = models.teaRoom.TeaGardenModel;
+	import CropCtrl = controllers.teaRoom.crop.CropCtrl;
+
+	/**
+	 * 茶园场景（除土地外）控制器，在此处理茶农自动除虫除草浇水的流程
+	 * @author hsx
+	 */
+	export class TeaGardenCtrl
+	{
+		static view:views.teaRoom.TeaGardenView;
+		static model:TeaGardenModel;
+		static sceneLayer: views.layers.SceneLayer;
+		curCropVO:models.base.CropVO;
+
+		private static _instance:TeaGardenCtrl;
+
+		constructor()
+		{
+
+			if(!TeaGardenCtrl.model)
+				TeaGardenCtrl.model = TeaGardenModel.instance;
+			if(!TeaGardenCtrl.sceneLayer)
+				TeaGardenCtrl.sceneLayer = new views.layers.SceneLayer();
+		}
+
+		static get instance():TeaGardenCtrl
+		{
+			if(!TeaGardenCtrl._instance)
+				TeaGardenCtrl._instance = new TeaGardenCtrl();
+			if(!TeaGardenCtrl.view)
+				TeaGardenCtrl.view = new views.teaRoom.TeaGardenView();
+			return TeaGardenCtrl._instance;
+		}
+
+		/**
+		 * 场景初始化时，茶农相关状态及事务的处理器
+		 */
+		initFarmerProcessor():void
+		{
+			// 有茶农
+			if(TeaGardenModel.teaGardenVO.farmerUrl)
+			{
+				// 有工作时间
+				if(TeaGardenModel.teaGardenVO.restTimeOfWork > 0)
+				{
+					// if(CropModel.isHasDebuff())
+					// 浇水
+					if(CropModel.dryCropVOsArr.length)
+					{
+						TeaGardenCtrl.instance.curCropVO = CropModel.dryCropVOsArr[0];
+						let curCoordinate:Laya.Point = TeaGardenCtrl.instance.getLandGridCoordinate();
+						TeaGardenCtrl.view.addWaterFarmer(TeaGardenModel.teaGardenVO.farmerUrl,"water",curCoordinate);
+						Laya.timer.once(3000,TeaGardenCtrl.instance,function():void{
+							if(TeaGardenCtrl.instance.curCropVO.dry)
+							{
+								controllers.teaRoom.crop.CropCtrl.callback = function():void{
+									TeaGardenCtrl.instance.curCropVO.dry = 0;
+									CropModel.dryCropVOsArr.shift();
+									Laya.timer.once(4000,TeaGardenCtrl.instance,function():void{
+										TeaGardenCtrl._instance.initFarmerProcessor();
+									});
+								};
+								controllers.teaRoom.crop.CropCtrl.getInstance().request_actWater(TeaGardenCtrl.instance.curCropVO,true,curCoordinate);
+							}
+						});
+					} // 除草
+					else if(CropModel.grassCropVOsArr.length)
+					{
+						TeaGardenCtrl.instance.curCropVO = CropModel.grassCropVOsArr[0];
+						let curCoordinate:Laya.Point = TeaGardenCtrl.instance.getLandGridCoordinate();
+						TeaGardenCtrl.view.addRemoveGrassWormFarmer(TeaGardenModel.teaGardenVO.farmerUrl,"removeGrass",curCoordinate);
+						Laya.timer.once(3000,TeaGardenCtrl.instance,function():void{
+							if(TeaGardenCtrl.instance.curCropVO.grass > 0)
+							{
+								controllers.teaRoom.crop.CropCtrl.callback = function():void{
+									TeaGardenCtrl.instance.curCropVO.grass--;
+									if(TeaGardenCtrl.instance.curCropVO.grass == 0)
+										CropModel.grassCropVOsArr.shift();
+									Laya.timer.once(4000,TeaGardenCtrl.instance,function():void{
+										TeaGardenCtrl._instance.initFarmerProcessor();
+									});
+								};
+								controllers.teaRoom.crop.CropCtrl.getInstance().request_actWipeGrass(TeaGardenCtrl.instance.curCropVO,true,curCoordinate);
+							}
+						});
+					} // 除虫
+					else if(CropModel.wormCropVOsArr.length)
+					{
+						TeaGardenCtrl.instance.curCropVO = CropModel.wormCropVOsArr[0];
+						let curCoordinate:Laya.Point = TeaGardenCtrl.instance.getLandGridCoordinate();
+						TeaGardenCtrl.view.addRemoveGrassWormFarmer(TeaGardenModel.teaGardenVO.farmerUrl,"killWorm",curCoordinate);
+						Laya.timer.once(3000,TeaGardenCtrl.instance,function():void{
+							if(TeaGardenCtrl.instance.curCropVO.worm > 0)
+							{
+								controllers.teaRoom.crop.CropCtrl.callback = function():void{
+									TeaGardenCtrl.instance.curCropVO.worm--;
+									if(TeaGardenCtrl.instance.curCropVO.worm == 0)
+										CropModel.wormCropVOsArr.shift();
+									Laya.timer.once(4000,TeaGardenCtrl.instance,function():void{
+										TeaGardenCtrl._instance.initFarmerProcessor();
+									});
+								};
+								controllers.teaRoom.crop.CropCtrl.getInstance().request_actPesticide(TeaGardenCtrl.instance.curCropVO,true);
+							}
+						});
+					} // 空闲
+					else
+					{
+						TeaGardenCtrl.view.addCommonFarmer(TeaGardenModel.teaGardenVO.farmerUrl);
+					}
+				}	// 空闲（无工资情况的空闲状态，买入工资卡后，再来调用该函数！）
+				else
+				{
+					TeaGardenCtrl.view.addCommonFarmer(TeaGardenModel.teaGardenVO.farmerUrl);
+				}
+			}
+		}
+
+		/**
+		 * 获取某地块的坐标点
+		 */
+		getLandGridCoordinate():Laya.Point
+		{
+			// 获取特定的地块
+			let landId:number = TeaGardenCtrl.instance.curCropVO.landId;
+			let landGrid:views.teaRoom.LandGridView = LandCtrl.landView.getLandGridById(landId);
+			let p:Laya.Point = new Laya.Point();
+			p.x = landGrid.x + 245;
+			p.y = landGrid.y + 220;
+			return p;
+		}
+
+		/**
+		 * 请求狗的数据
+		 */
+		request_initDog():void
+		{
+			TeaGardenModel.callback = this.initDogOver;
+			TeaGardenCtrl.model.request_initDog();
+		}
+
+		private initDogOver(takeData:Object):void
+		{
+			if(takeData["swfUrl"])
+				TeaGardenCtrl.view.addDog(takeData["swfUrl"]);
+
+			TeaGardenCtrl.instance.request_initFarmer();
+		}
+
+		/**
+		 * 请求茶园装饰
+		 */
+		request_getTeaGardenDec():void{
+			TeaGardenModel.callback = this.initLoadBg;
+			TeaGardenCtrl.model.request_getFarmDecoration();
+		}
+
+		initLoadBg(takeData?:any):void{
+			TeaGardenCtrl.sceneLayer.resetLoadBg(takeData);
+		}
+		/**
+		 * 请求茶农的数据
+		 */
+		request_initFarmer():void
+		{
+			TeaGardenModel.callback = this.initFarmerOver;
+			TeaGardenCtrl.model.request_initFarmer();
+		}
+
+		private initFarmerOver(takeData:Object):void
+		{
+			// TeaGardenCtrl.instance.view.addFarmer(takeData);	// old
+
+			// 根据减益状态，初始化茶农相关操作
+			TeaGardenCtrl.instance.initFarmerProcessor();
+		}
+
+
+	}
+}

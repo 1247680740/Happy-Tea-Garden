@@ -1,0 +1,134 @@
+{
+    "frames": {
+        "allBg.png": {
+            "frame": {
+                "h": 83,
+                "idx": 0,
+                "w": 171,
+                "x": 0,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 87,
+                "w": 171
+            },
+            "spriteSourceSize": {
+                "h": 83,
+                "w": 171,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": true
+        },
+        "clip_num.png": {
+            "frame": {
+                "h": 34,
+                "idx": 0,
+                "w": 168,
+                "x": 0,
+                "y": 84
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 34,
+                "w": 168
+            },
+            "spriteSourceSize": {
+                "h": 34,
+                "w": 168,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "defaultBg.png": {
+            "frame": {
+                "h": 47,
+                "idx": 0,
+                "w": 47,
+                "x": 57,
+                "y": 119
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 47,
+                "w": 47
+            },
+            "spriteSourceSize": {
+                "h": 47,
+                "w": 47,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "handBg.png": {
+            "frame": {
+                "h": 55,
+                "idx": 0,
+                "w": 56,
+                "x": 0,
+                "y": 119
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 57,
+                "w": 57
+            },
+            "spriteSourceSize": {
+                "h": 55,
+                "w": 56,
+                "x": 0,
+                "y": 1
+            },
+            "trimmed": true
+        },
+        "progress$bar.png": {
+            "frame": {
+                "h": 14,
+                "idx": 0,
+                "w": 77,
+                "x": 105,
+                "y": 119
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 14,
+                "w": 77
+            },
+            "spriteSourceSize": {
+                "h": 14,
+                "w": 77,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "progress.png": {
+            "frame": {
+                "h": 14,
+                "idx": 0,
+                "w": 77,
+                "x": 105,
+                "y": 134
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 14,
+                "w": 77
+            },
+            "spriteSourceSize": {
+                "h": 14,
+                "w": 77,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        }
+    },
+    "meta": {
+        "image": "player.png",
+        "prefix": "gameUI/player/"
+    }
+}

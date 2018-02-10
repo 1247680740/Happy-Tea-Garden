@@ -1,0 +1,127 @@
+var models;
+(function (models) {
+    var teaRoom;
+    (function (teaRoom) {
+        // import PlayerInfoModel = models.player.PlayerInfoModel;
+        /**
+         * 茶园场景数据模型
+         * @author hsx
+         */
+        var TeaGardenModel = /** @class */ (function () {
+            function TeaGardenModel() {
+                TeaGardenModel.teaGardenVO = new models.base.TeaGardenVO();
+            }
+            Object.defineProperty(TeaGardenModel, "instance", {
+                get: function () {
+                    if (!TeaGardenModel._instance)
+                        TeaGardenModel._instance = new TeaGardenModel();
+                    return TeaGardenModel._instance;
+                },
+                enumerable: true,
+                configurable: true
+            });
+            /**
+             * 请求狗的数据 (get url about dog's id)
+             * 有 "getDog" 接口与之对应（get dog's id）
+             */
+            TeaGardenModel.prototype.request_initDog = function () {
+                HttpServiceProxy.request("initDog", null, this.initDogOver);
+            };
+            TeaGardenModel.prototype.initDogOver = function (receiveData) {
+                if (!receiveData)
+                    return;
+                var takeData = new Object();
+                takeData["swfUrl"] = receiveData["timg"];
+                TeaGardenModel.instance.handleCallback(takeData);
+            };
+            /**
+             * 请求茶农数据 (get url about farmer's id)
+             * 有 "getFarmer" 接口与之对应（get farmer's id）
+             */
+            TeaGardenModel.prototype.request_initFarmer = function () {
+                HttpServiceProxy.request("initFarmer", null, this.initFarmerOver);
+            };
+            TeaGardenModel.prototype.initFarmerOver = function (receiveData) {
+                if (!receiveData)
+                    return;
+                // {"_c":"1","_cmsg":"","_api":"initFarmer_5699","tn":"张大姐","timg":"http://kaixins.app100712594.twsapp.com/static/farmer_13.swf",
+                // "farmercard":72678,"_cmd":"","_g":"","_e":""}
+                if (receiveData["_cmsg"].length == 0) {
+                    TeaGardenModel.teaGardenVO.restTimeOfWork = receiveData["farmercard"] ? receiveData["farmercard"] : 0;
+                    TeaGardenModel.teaGardenVO.farmerUrl = receiveData["timg"] ? receiveData["timg"] : null;
+                    TeaGardenModel.instance.handleCallback(receiveData);
+                }
+            };
+            /**
+             * 请求茶园背景、狗盆数据（待完善）
+             * 相关接口 api:initDogPot => 确认是否有狗粮！
+             */
+            TeaGardenModel.prototype.request_getFarmDecoration = function () {
+                HttpServiceProxy.request("getFarmDecoration", null, this.getFarmDecorationOver);
+            };
+            TeaGardenModel.prototype.getFarmDecorationOver = function (receiveData) {
+                if (!receiveData)
+                    return;
+                /* 返回格式：
+                    {
+                        "_c": "1",
+                        "_cmsg": " ",
+                        "_api": "getFarmDecoration_87176",
+                        "_d": {
+                            "0": {
+                                "di": 8001,
+                                "dn": "茶园山庄",
+                                "realimg": "http://kaixins.app100712594.twsapp.com/static/d/d/bg_8001.jpg",
+                                "ty": "theme",
+                                "attach": [
+                                    {
+                                        "di": 8001,
+                                        "dn": "茶园山庄",
+                                        "realimg": "http://kaixins.app100712594.twsapp.com/static/d/d/bg_8001.jpg",
+                                        "ty": "background"
+                                    },
+                                    {
+                                        "di": 8004,
+                                        "dn": "",
+                                        "realimg": "http://kaixins.app100712594.twsapp.com/static/d/d/dp_8004.swf",
+                                        "ty": "dog_pot"
+                                    }
+                                ]
+                            }
+                        },
+                        "_cmd": "",
+                        "_g": "",
+                        "_e": ""
+                    }
+                */
+            };
+            /**
+             * 根据服务器返回的结果做相应的后续处理
+             */
+            TeaGardenModel.prototype.resultHandler = function (receiveData, takeData) {
+                if (receiveData["_cmsg"]) {
+                    takeData["errMsg"] = receiveData["_cmsg"];
+                }
+                else {
+                    var exp = receiveData["_e"] ? receiveData["_e"] : 0;
+                    if (exp) {
+                        takeData["exp"] = exp;
+                    }
+                    PlayerInfoCtrl.instance.updatePlayerDataAndRender(receiveData);
+                }
+                TeaGardenModel.instance.handleCallback(takeData);
+            };
+            TeaGardenModel.prototype.handleCallback = function (takeData) {
+                if (TeaGardenModel.callback) {
+                    if (takeData)
+                        TeaGardenModel.callback(takeData);
+                    else
+                        TeaGardenModel.callback();
+                }
+            };
+            return TeaGardenModel;
+        }());
+        teaRoom.TeaGardenModel = TeaGardenModel;
+    })(teaRoom = models.teaRoom || (models.teaRoom = {}));
+})(models || (models = {}));
+//# sourceMappingURL=TeaGardenModel.js.map

@@ -1,0 +1,51 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var views;
+(function (views) {
+    var teaRoom;
+    (function (teaRoom) {
+        var toolBar;
+        (function (toolBar) {
+            var Event = laya.events.Event;
+            var RightDownToolBarUI = ui.gameUI.toolBar.RightDownToolBarUI;
+            /**
+             * 右下部工具条：仓库、商店……
+             */
+            var RightDownToolBarView = /** @class */ (function (_super) {
+                __extends(RightDownToolBarView, _super);
+                function RightDownToolBarView() {
+                    var _this = _super.call(this) || this;
+                    _this.mouseThrough = true;
+                    _this.on(Event.CLICK, _this, _this.btnClkedFn);
+                    return _this;
+                }
+                RightDownToolBarView.prototype.btnClkedFn = function (event) {
+                    var btnName = event.target.name;
+                    if (btnName == "storage") {
+                        controllers.teaRoom.storage.StorageCtrl.getInstance().showStorageDialog();
+                    }
+                    else if (btnName == "shop") {
+                        controllers.teaRoom.shop.ShopCtrl.getInstance().showShopDialog();
+                    }
+                    else if (btnName == "teaWiki") {
+                        controllers.teaWiki.TeaWikiCtrl.getInstance().showFireTeaWiki();
+                    }
+                    else if (btnName == "exam") {
+                        controllers.exam.ExamDialogCtrl.getInstance().showExamDialog();
+                    }
+                };
+                return RightDownToolBarView;
+            }(RightDownToolBarUI));
+            toolBar.RightDownToolBarView = RightDownToolBarView;
+        })(toolBar = teaRoom.toolBar || (teaRoom.toolBar = {}));
+    })(teaRoom = views.teaRoom || (views.teaRoom = {}));
+})(views || (views = {}));
+//# sourceMappingURL=RightDownToolBarView.js.map

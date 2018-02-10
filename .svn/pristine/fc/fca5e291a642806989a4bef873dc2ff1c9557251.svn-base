@@ -1,0 +1,54 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var views;
+(function (views) {
+    var makeRoom;
+    (function (makeRoom) {
+        var toolBar;
+        (function (toolBar) {
+            var Event = laya.events.Event;
+            var MakeTeaRightDownToolBarUI = ui.gameUI.toolBar.MakeTeaHome_RightDownToolBarUI;
+            var MakeTeaHomeShopCtrl = controllers.makeRoom.shop.MakeTeaHomeShopCtrl;
+            var MakeTeaStorageCtrl = controllers.makeRoom.storage.MakeTeaStorageCtrl;
+            var ExamDialogCtrl = controllers.exam.ExamDialogCtrl;
+            var TeaWikiCtrl = controllers.teaWiki.TeaWikiCtrl;
+            /**
+             * 泡茶室右下部工具条：仓库、商店……
+             */
+            var MakeTeaRightDownToolBarView = /** @class */ (function (_super) {
+                __extends(MakeTeaRightDownToolBarView, _super);
+                function MakeTeaRightDownToolBarView() {
+                    var _this = _super.call(this) || this;
+                    _this.on(Event.CLICK, _this, _this.btnClkedFn);
+                    return _this;
+                }
+                MakeTeaRightDownToolBarView.prototype.btnClkedFn = function (event) {
+                    var btnName = event.target.name;
+                    if (btnName == "storage") {
+                        MakeTeaStorageCtrl.getInstance().showStorageDialog();
+                    }
+                    else if (btnName == "shop") {
+                        MakeTeaHomeShopCtrl.getInstance().showShopDialog();
+                    }
+                    else if (btnName == "teaWiki") {
+                        TeaWikiCtrl.getInstance().showFireTeaWiki();
+                    }
+                    else if (btnName == "exam") {
+                        ExamDialogCtrl.getInstance().showExamDialog();
+                    }
+                };
+                return MakeTeaRightDownToolBarView;
+            }(MakeTeaRightDownToolBarUI));
+            toolBar.MakeTeaRightDownToolBarView = MakeTeaRightDownToolBarView;
+        })(toolBar = makeRoom.toolBar || (makeRoom.toolBar = {}));
+    })(makeRoom = views.makeRoom || (views.makeRoom = {}));
+})(views || (views = {}));
+//# sourceMappingURL=MakeTeaHome_RightDownToolBarView.js.map

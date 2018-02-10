@@ -1,0 +1,575 @@
+{
+    "frames": {
+        "activityIcon.png": {
+            "frame": {
+                "h": 51,
+                "idx": 0,
+                "w": 47,
+                "x": 210,
+                "y": 282
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 64,
+                "w": 62
+            },
+            "spriteSourceSize": {
+                "h": 51,
+                "w": 47,
+                "x": 1,
+                "y": 1
+            },
+            "trimmed": true
+        },
+        "bag.png": {
+            "frame": {
+                "h": 59,
+                "idx": 0,
+                "w": 72,
+                "x": 210,
+                "y": 222
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 59,
+                "w": 72,
+                "x": 1,
+                "y": 8
+            },
+            "trimmed": true
+        },
+        "brush.png": {
+            "frame": {
+                "h": 48,
+                "idx": 0,
+                "w": 66,
+                "x": 276,
+                "y": 173
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 48,
+                "w": 66,
+                "x": 5,
+                "y": 13
+            },
+            "trimmed": true
+        },
+        "btn_useExplain.png": {
+            "frame": {
+                "h": 45,
+                "idx": 0,
+                "w": 59,
+                "x": 258,
+                "y": 282
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 65,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 45,
+                "w": 59,
+                "x": 0,
+                "y": 20
+            },
+            "trimmed": true
+        },
+        "commonMouse.png": {
+            "frame": {
+                "h": 58,
+                "idx": 0,
+                "w": 73,
+                "x": 202,
+                "y": 162
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 58,
+                "w": 73,
+                "x": 1,
+                "y": 8
+            },
+            "trimmed": true
+        },
+        "exam.png": {
+            "frame": {
+                "h": 80,
+                "idx": 0,
+                "w": 80,
+                "x": 0,
+                "y": 81
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 80,
+                "w": 80
+            },
+            "spriteSourceSize": {
+                "h": 80,
+                "w": 80,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "friedTeaHome.png": {
+            "frame": {
+                "h": 64,
+                "idx": 0,
+                "w": 64,
+                "x": 145,
+                "y": 266
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 64,
+                "w": 64,
+                "x": 6,
+                "y": 5
+            },
+            "trimmed": true
+        },
+        "friendBtn.png": {
+            "frame": {
+                "h": 75,
+                "idx": 0,
+                "w": 75,
+                "x": 126,
+                "y": 190
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 75,
+                "w": 75,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "grass.png": {
+            "frame": {
+                "h": 64,
+                "idx": 0,
+                "w": 70,
+                "x": 74,
+                "y": 285
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 64,
+                "w": 70,
+                "x": 2,
+                "y": 4
+            },
+            "trimmed": true
+        },
+        "guide.png": {
+            "frame": {
+                "h": 42,
+                "idx": 0,
+                "w": 74,
+                "x": 121,
+                "y": 147
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 42,
+                "w": 74,
+                "x": 0,
+                "y": 26
+            },
+            "trimmed": true
+        },
+        "harvestAll.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 67,
+                "x": 58,
+                "y": 224
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 67,
+                "x": 5,
+                "y": 9
+            },
+            "trimmed": true
+        },
+        "harvestOne.png": {
+            "frame": {
+                "h": 61,
+                "idx": 0,
+                "w": 67,
+                "x": 53,
+                "y": 162
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 61,
+                "w": 67,
+                "x": 5,
+                "y": 8
+            },
+            "trimmed": true
+        },
+        "killWorm.png": {
+            "frame": {
+                "h": 54,
+                "idx": 0,
+                "w": 62,
+                "x": 283,
+                "y": 118
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 54,
+                "w": 62,
+                "x": 8,
+                "y": 13
+            },
+            "trimmed": true
+        },
+        "landUpgrade.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 74,
+                "x": 81,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 70,
+                "w": 74,
+                "x": 1,
+                "y": 2
+            },
+            "trimmed": true
+        },
+        "makeTeaHome.png": {
+            "frame": {
+                "h": 68,
+                "idx": 0,
+                "w": 69,
+                "x": 298,
+                "y": 49
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 68,
+                "w": 69,
+                "x": 3,
+                "y": 6
+            },
+            "trimmed": true
+        },
+        "pot_1.png": {
+            "frame": {
+                "h": 39,
+                "idx": 0,
+                "w": 75,
+                "x": 207,
+                "y": 122
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 39,
+                "w": 75,
+                "x": 0,
+                "y": 25
+            },
+            "trimmed": true
+        },
+        "pot_2.png": {
+            "frame": {
+                "h": 45,
+                "idx": 0,
+                "w": 75,
+                "x": 207,
+                "y": 76
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 45,
+                "w": 75,
+                "x": 0,
+                "y": 14
+            },
+            "trimmed": true
+        },
+        "ranklist.png": {
+            "frame": {
+                "h": 56,
+                "idx": 0,
+                "w": 64,
+                "x": 283,
+                "y": 222
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 69,
+                "w": 74
+            },
+            "spriteSourceSize": {
+                "h": 56,
+                "w": 64,
+                "x": 1,
+                "y": 5
+            },
+            "trimmed": true
+        },
+        "removeGrass.png": {
+            "frame": {
+                "h": 55,
+                "idx": 0,
+                "w": 73,
+                "x": 0,
+                "y": 297
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 55,
+                "w": 73,
+                "x": 1,
+                "y": 9
+            },
+            "trimmed": true
+        },
+        "shop.png": {
+            "frame": {
+                "h": 75,
+                "idx": 0,
+                "w": 75,
+                "x": 131,
+                "y": 71
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 75,
+                "w": 75,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "spade.png": {
+            "frame": {
+                "h": 48,
+                "idx": 0,
+                "w": 69,
+                "x": 298,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 48,
+                "w": 69,
+                "x": 2,
+                "y": 14
+            },
+            "trimmed": true
+        },
+        "storage.png": {
+            "frame": {
+                "h": 75,
+                "idx": 0,
+                "w": 75,
+                "x": 222,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 75,
+                "w": 75,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "teaWiki.png": {
+            "frame": {
+                "h": 80,
+                "idx": 0,
+                "w": 80,
+                "x": 0,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 80,
+                "w": 80
+            },
+            "spriteSourceSize": {
+                "h": 80,
+                "w": 80,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "tea_graden.png": {
+            "frame": {
+                "h": 71,
+                "idx": 0,
+                "w": 57,
+                "x": 0,
+                "y": 225
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 71,
+                "w": 57,
+                "x": 7,
+                "y": 1
+            },
+            "trimmed": true
+        },
+        "toolBox.png": {
+            "frame": {
+                "h": 65,
+                "idx": 0,
+                "w": 65,
+                "x": 156,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 65,
+                "w": 65,
+                "x": 5,
+                "y": 5
+            },
+            "trimmed": true
+        },
+        "water.png": {
+            "frame": {
+                "h": 68,
+                "idx": 0,
+                "w": 49,
+                "x": 81,
+                "y": 71
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 68,
+                "w": 49,
+                "x": 12,
+                "y": 3
+            },
+            "trimmed": true
+        },
+        "worm.png": {
+            "frame": {
+                "h": 62,
+                "idx": 0,
+                "w": 52,
+                "x": 0,
+                "y": 162
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 62,
+                "w": 52,
+                "x": 12,
+                "y": 6
+            },
+            "trimmed": true
+        }
+    },
+    "meta": {
+        "image": "toolBar.png",
+        "prefix": "gameUI/toolBar/"
+    }
+}

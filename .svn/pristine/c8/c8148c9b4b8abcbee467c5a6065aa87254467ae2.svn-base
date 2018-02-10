@@ -1,0 +1,43 @@
+namespace views.friedRoom.toolBar
+{
+	import Event = laya.events.Event;
+	import FriedRightDownToolBarUI = ui.gameUI.toolBar.FireTeaHome_RightDownToolBarUI;
+	import FriedTeaHomeShopCtrl = controllers.friedRoom.shop.FriedTeaHomeShopCtrl;
+	import FriedTeaStorageCtrl = controllers.friedRoom.storage.FriedTeaStorageCtrl;
+	import ExamDialogCtrl = controllers.exam.ExamDialogCtrl;
+	import TeaWikiCtrl = controllers.teaWiki.TeaWikiCtrl;
+
+	/**
+	 * 炒茶室右下部工具条：仓库、商店……
+	 */
+	export class FriedRightDownToolBarView extends FriedRightDownToolBarUI
+	{
+		constructor()
+		{
+			super();
+
+			this.mouseThrough = true;
+			this.on(Event.CLICK,this,this.btnClkedFn);
+		}
+
+		btnClkedFn(event:Event):void
+		{
+			let btnName:string = event.target.name;
+			if(btnName == "storage")
+			{
+				FriedTeaStorageCtrl.getInstance().showStorageDialog();
+			}
+			else if(btnName == "shop")
+			{
+				FriedTeaHomeShopCtrl.getInstance().showShopDialog();
+			}else if(btnName == "teaWiki")
+			{
+				TeaWikiCtrl.getInstance().showFireTeaWiki();
+			}else if(btnName == "exam")
+			{
+				ExamDialogCtrl.getInstance().showExamDialog();
+			}
+
+		}
+	}
+}

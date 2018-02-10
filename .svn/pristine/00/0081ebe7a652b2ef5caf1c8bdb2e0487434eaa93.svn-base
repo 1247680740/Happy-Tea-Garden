@@ -1,0 +1,27 @@
+namespace views.makeRoom
+{
+	import BaseView = views.base.BaseView;
+	import MakeTeaRoomUI = ui.gameUI.room.MakeTeaRoomUI;
+
+
+	/**
+	 * 泡茶室场景
+	 */
+	export class Scene extends BaseView
+	{
+		constructor()
+		{
+			super();
+
+
+		}
+
+		loadBg():void
+		{
+			var bgView:MakeTeaRoomUI = new MakeTeaRoomUI();
+			bgView.name = "makeTeaRoomBg";
+			if(!this.getChildByName("makeTeaRoomBg"))
+				this.addChild(bgView);
+		}
+	}
+}

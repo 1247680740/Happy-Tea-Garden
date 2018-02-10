@@ -1,0 +1,56 @@
+var models;
+(function (models) {
+    var player;
+    (function (player) {
+        var HttpServiceProxy = nets.HttpServiceProxy;
+        var PlayerInfoModel = /** @class */ (function () {
+            function PlayerInfoModel() {
+                PlayerInfoModel.playerInfo = new player.PlayerInfoVO();
+            }
+            Object.defineProperty(PlayerInfoModel, "instance", {
+                get: function () {
+                    if (!PlayerInfoModel._instance)
+                        PlayerInfoModel._instance = new PlayerInfoModel();
+                    return PlayerInfoModel._instance;
+                },
+                enumerable: true,
+                configurable: true
+            });
+            /**
+             * 请求玩家信息数据
+             */
+            PlayerInfoModel.prototype.request_getUserInfo = function () {
+                HttpServiceProxy.request("getUserInfo", { 'sf': IdentityConfig.uid }, this.getUserInfoOverFn, IdentityConfig.uid);
+            };
+            /**
+             * 注意(this)：此回调函数的作用域已不再是 PlayerInfoModel 类本身，可能是 [object Window]
+             */
+            PlayerInfoModel.prototype.getUserInfoOverFn = function (receiveData, takeData) {
+                if (receiveData)
+                    PlayerInfoModel.receiveData = receiveData;
+                if (takeData)
+                    PlayerInfoModel.takeData = takeData;
+                PlayerInfoModel.playerInfo.exp = receiveData["e"];
+                PlayerInfoModel.playerInfo.teaExam = receiveData["grade"];
+                PlayerInfoModel.playerInfo.level = parseInt(receiveData["l"]);
+                PlayerInfoModel.playerInfo.money = parseInt(receiveData["m"]);
+                PlayerInfoModel.playerInfo.isSign = receiveData["sign"]; //是否签到
+                PlayerInfoModel.playerInfo.nextLevelExp = receiveData["ue"];
+                PlayerInfoModel.playerInfo.userName = receiveData["un"];
+                PlayerInfoModel.playerInfo.diamond = parseInt(receiveData["yb"]);
+                PlayerInfoModel.playerInfo.ico = receiveData["i"];
+                // PlayerInfoModel.playerInfo.cmd = receiveData["_cmd"];   // 待执行的命令
+                if (PlayerInfoModel.callback)
+                    PlayerInfoModel.callback();
+            };
+            PlayerInfoModel.dispose = function () {
+                this.callback = null;
+                this.receiveData = null;
+                this.takeData = null;
+            };
+            return PlayerInfoModel;
+        }());
+        player.PlayerInfoModel = PlayerInfoModel;
+    })(player = models.player || (models.player = {}));
+})(models || (models = {}));
+//# sourceMappingURL=PlayerInfoModel.js.map

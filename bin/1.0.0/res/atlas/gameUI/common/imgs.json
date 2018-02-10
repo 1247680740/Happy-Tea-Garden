@@ -1,0 +1,134 @@
+{
+    "frames": {
+        "bg.png": {
+            "frame": {
+                "h": 320,
+                "idx": 0,
+                "w": 460,
+                "x": 0,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 320,
+                "w": 460
+            },
+            "spriteSourceSize": {
+                "h": 320,
+                "w": 460,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "shop_flag1.png": {
+            "frame": {
+                "h": 78,
+                "idx": 0,
+                "w": 169,
+                "x": 521,
+                "y": 529
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 78,
+                "w": 169
+            },
+            "spriteSourceSize": {
+                "h": 78,
+                "w": 169,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "shop_flag2.png": {
+            "frame": {
+                "h": 182,
+                "idx": 0,
+                "w": 193,
+                "x": 521,
+                "y": 257
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 182,
+                "w": 193
+            },
+            "spriteSourceSize": {
+                "h": 182,
+                "w": 193,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "storage_flag1.png": {
+            "frame": {
+                "h": 88,
+                "idx": 0,
+                "w": 177,
+                "x": 521,
+                "y": 440
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 88,
+                "w": 177
+            },
+            "spriteSourceSize": {
+                "h": 88,
+                "w": 177,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "storage_flag2.png": {
+            "frame": {
+                "h": 256,
+                "idx": 0,
+                "w": 244,
+                "x": 461,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 256,
+                "w": 245
+            },
+            "spriteSourceSize": {
+                "h": 256,
+                "w": 244,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": true
+        },
+        "useExplain.png": {
+            "frame": {
+                "h": 279,
+                "idx": 0,
+                "w": 520,
+                "x": 0,
+                "y": 321
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 279,
+                "w": 520
+            },
+            "spriteSourceSize": {
+                "h": 279,
+                "w": 520,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        }
+    },
+    "meta": {
+        "image": "imgs.png",
+        "prefix": "gameUI/common/imgs/"
+    }
+}

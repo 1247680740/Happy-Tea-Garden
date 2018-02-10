@@ -1,0 +1,239 @@
+{
+    "frames": {
+        "ceramic.png": {
+            "frame": {
+                "h": 101,
+                "idx": 0,
+                "w": 181,
+                "x": 207,
+                "y": 344
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 101,
+                "w": 181
+            },
+            "spriteSourceSize": {
+                "h": 101,
+                "w": 181,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "checkbox.png": {
+            "frame": {
+                "h": 48,
+                "idx": 0,
+                "w": 16,
+                "x": 329,
+                "y": 153
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 48,
+                "w": 16
+            },
+            "spriteSourceSize": {
+                "h": 48,
+                "w": 16,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "glass.png": {
+            "frame": {
+                "h": 136,
+                "idx": 0,
+                "w": 199,
+                "x": 196,
+                "y": 207
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 136,
+                "w": 199
+            },
+            "spriteSourceSize": {
+                "h": 136,
+                "w": 199,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "greenWater.png": {
+            "frame": {
+                "h": 49,
+                "idx": 0,
+                "w": 16,
+                "x": 472,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 55,
+                "w": 55
+            },
+            "spriteSourceSize": {
+                "h": 49,
+                "w": 16,
+                "x": 20,
+                "y": 3
+            },
+            "trimmed": true
+        },
+        "makeTeaTeacher.png": {
+            "frame": {
+                "h": 360,
+                "idx": 0,
+                "w": 195,
+                "x": 0,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 360,
+                "w": 195
+            },
+            "spriteSourceSize": {
+                "h": 360,
+                "w": 195,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "makeTeaTitle.png": {
+            "frame": {
+                "h": 46,
+                "idx": 0,
+                "w": 215,
+                "x": 207,
+                "y": 446
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 50,
+                "w": 221
+            },
+            "spriteSourceSize": {
+                "h": 46,
+                "w": 215,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": true
+        },
+        "reaWare.png": {
+            "frame": {
+                "h": 110,
+                "idx": 0,
+                "w": 206,
+                "x": 0,
+                "y": 361
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 110,
+                "w": 206
+            },
+            "spriteSourceSize": {
+                "h": 110,
+                "w": 206,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "redWater.png": {
+            "frame": {
+                "h": 49,
+                "idx": 0,
+                "w": 14,
+                "x": 472,
+                "y": 50
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 55,
+                "w": 55
+            },
+            "spriteSourceSize": {
+                "h": 49,
+                "w": 14,
+                "x": 21,
+                "y": 3
+            },
+            "trimmed": true
+        },
+        "spell.png": {
+            "frame": {
+                "h": 206,
+                "idx": 0,
+                "w": 132,
+                "x": 196,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 214,
+                "w": 138
+            },
+            "spriteSourceSize": {
+                "h": 206,
+                "w": 132,
+                "x": 1,
+                "y": 1
+            },
+            "trimmed": true
+        },
+        "symbomBg.png": {
+            "frame": {
+                "h": 130,
+                "idx": 0,
+                "w": 75,
+                "x": 396,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 130,
+                "w": 75
+            },
+            "spriteSourceSize": {
+                "h": 130,
+                "w": 75,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "tabWater.png": {
+            "frame": {
+                "h": 52,
+                "idx": 0,
+                "w": 15,
+                "x": 472,
+                "y": 100
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 55,
+                "w": 55
+            },
+            "spriteSourceSize": {
+                "h": 52,
+                "w": 15,
+                "x": 20,
+                "y": 2
+            },
+            "trimmed": true
+        }
+    },
+    "meta": {
+        "image": "makeTea.png",
+        "prefix": "gameUI/makeTea/"
+    }
+}

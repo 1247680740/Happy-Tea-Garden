@@ -1,0 +1,44 @@
+namespace views.teaRoom.toolBar
+{
+	import Event = laya.events.Event;
+	import RightDownToolBarUI = ui.gameUI.toolBar.RightDownToolBarUI;
+	/**
+	 * 右下部工具条：仓库、商店……
+	 */
+	export class RightDownToolBarView extends RightDownToolBarUI
+	{
+		constructor()
+		{
+			super();
+
+			this.mouseThrough = true;
+			this.on(Event.CLICK,this,this.btnClkedFn);
+		}
+
+		btnClkedFn(event:Event):void
+		{
+			let btnName:string = event.target.name;
+			if(btnName == "storage")
+			{
+				controllers.teaRoom.storage.StorageCtrl.getInstance().showStorageDialog();
+			}
+			else if(btnName == "shop")
+			{
+				controllers.teaRoom.shop.ShopCtrl.getInstance().showShopDialog();
+			}
+			else if(btnName == "teaWiki")
+			{
+				controllers.teaWiki.TeaWikiCtrl.getInstance().showFireTeaWiki();
+			}
+			else if(btnName == "exam")
+			{
+				controllers.exam.ExamDialogCtrl.getInstance().showExamDialog();
+			}
+			else if(btnName == "friendBtn")
+			{
+				controllers.friendList.FriendListCtrl.getInstance().showFriendList();
+			}
+		}
+
+	}
+}

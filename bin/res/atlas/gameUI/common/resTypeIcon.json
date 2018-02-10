@@ -1,0 +1,302 @@
+{
+    "frames": {
+        "2.png": {
+            "frame": {
+                "h": 33,
+                "idx": 0,
+                "w": 32,
+                "x": 0,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 33,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "h": 33,
+                "w": 32,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "background.png": {
+            "frame": {
+                "h": 33,
+                "idx": 0,
+                "w": 32,
+                "x": 0,
+                "y": 34
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 33,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "h": 33,
+                "w": 32,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "coin.png": {
+            "frame": {
+                "h": 33,
+                "idx": 0,
+                "w": 32,
+                "x": 0,
+                "y": 68
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 33,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "h": 33,
+                "w": 32,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "dog.png": {
+            "frame": {
+                "h": 33,
+                "idx": 0,
+                "w": 32,
+                "x": 0,
+                "y": 102
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 33,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "h": 33,
+                "w": 32,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "dog_house.png": {
+            "frame": {
+                "h": 33,
+                "idx": 0,
+                "w": 32,
+                "x": 33,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 33,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "h": 33,
+                "w": 32,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "farmer.png": {
+            "frame": {
+                "h": 33,
+                "idx": 0,
+                "w": 32,
+                "x": 66,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 33,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "h": 33,
+                "w": 32,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "farmercard.png": {
+            "frame": {
+                "h": 33,
+                "idx": 0,
+                "w": 32,
+                "x": 99,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 33,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "h": 33,
+                "w": 32,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "flower.png": {
+            "frame": {
+                "h": 33,
+                "idx": 0,
+                "w": 32,
+                "x": 33,
+                "y": 34
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 33,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "h": 33,
+                "w": 32,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "flowerfruit.png": {
+            "frame": {
+                "h": 33,
+                "idx": 0,
+                "w": 32,
+                "x": 33,
+                "y": 68
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 33,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "h": 33,
+                "w": 32,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "food.png": {
+            "frame": {
+                "h": 33,
+                "idx": 0,
+                "w": 32,
+                "x": 33,
+                "y": 102
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 33,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "h": 33,
+                "w": 32,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "person_house.png": {
+            "frame": {
+                "h": 33,
+                "idx": 0,
+                "w": 32,
+                "x": 66,
+                "y": 34
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 33,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "h": 33,
+                "w": 32,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "prop.png": {
+            "frame": {
+                "h": 33,
+                "idx": 0,
+                "w": 32,
+                "x": 99,
+                "y": 34
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 33,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "h": 33,
+                "w": 32,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "tea.png": {
+            "frame": {
+                "h": 33,
+                "idx": 0,
+                "w": 32,
+                "x": 66,
+                "y": 68
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 33,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "h": 33,
+                "w": 32,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "teafruit.png": {
+            "frame": {
+                "h": 33,
+                "idx": 0,
+                "w": 32,
+                "x": 66,
+                "y": 102
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 33,
+                "w": 32
+            },
+            "spriteSourceSize": {
+                "h": 33,
+                "w": 32,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        }
+    },
+    "meta": {
+        "image": "resTypeIcon.png",
+        "prefix": "gameUI/common/resTypeIcon/"
+    }
+}

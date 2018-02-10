@@ -1,0 +1,44 @@
+namespace views.makeRoom.toolBar
+{
+	import Event = laya.events.Event;
+	import MakeTeaRightDownToolBarUI = ui.gameUI.toolBar.MakeTeaHome_RightDownToolBarUI;
+	import FriedTeaHomeShopCtrl = controllers.friedRoom.shop.FriedTeaHomeShopCtrl;
+	import MakeTeaHomeShopCtrl = controllers.makeRoom.shop.MakeTeaHomeShopCtrl;
+	import FriedTeaStorageCtrl = controllers.friedRoom.storage.FriedTeaStorageCtrl;
+    import MakeTeaStorageCtrl =controllers.makeRoom.storage.MakeTeaStorageCtrl;
+	import ExamDialogCtrl = controllers.exam.ExamDialogCtrl;
+	import TeaWikiCtrl = controllers.teaWiki.TeaWikiCtrl;
+
+	/**
+	 * 泡茶室右下部工具条：仓库、商店……
+	 */
+	export class MakeTeaRightDownToolBarView extends MakeTeaRightDownToolBarUI
+	{
+		constructor()
+		{
+			super();
+
+			this.on(Event.CLICK,this,this.btnClkedFn);
+		}
+
+		btnClkedFn(event:Event):void
+		{
+			let btnName:string = event.target.name;
+			if(btnName == "storage")
+			{
+				MakeTeaStorageCtrl.getInstance().showStorageDialog();
+			}
+			else if(btnName == "shop")
+			{
+				MakeTeaHomeShopCtrl.getInstance().showShopDialog();
+			}else if(btnName == "teaWiki")
+			{
+				TeaWikiCtrl.getInstance().showFireTeaWiki();
+			}else if(btnName == "exam")
+			{
+				ExamDialogCtrl.getInstance().showExamDialog();
+			}
+
+		}
+	}
+}

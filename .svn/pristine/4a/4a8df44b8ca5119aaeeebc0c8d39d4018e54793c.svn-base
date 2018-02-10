@@ -1,0 +1,58 @@
+namespace views.layers
+{
+    import Sprite = laya.display.Sprite;
+    import Event = laya.events.Event;
+    import BaseView = views.base.BaseView;
+    import FriedTeaRoom=ui.gameUI.room.FriedTeaRoomUI;
+    import UILayerManager=managers.UILayerManager;
+    import FriedPotLayerUI=ui.gameUI.pot.FriedTeaPotUI;
+
+    /**
+     * 炒茶室场景层
+     * 在此类加入炒茶相关的视图 -- hsx
+     */
+    export class FriedTeaHomeLayer extends BaseView
+    {
+        resArray:Array<Object>;
+        constructor()
+        {
+            super();
+
+            this.resArray = [
+                {url:"laya/assets/gameUI/gossip/FriedTeaHome.png",type:Laya.Loader.IMAGE}
+            ];
+
+            this.init();
+        }
+
+        /**
+         * 此处所加载的图片无用，待整合去掉！
+         */
+        init():void
+        {
+             Laya.loader.load(this.resArray,Laya.Handler.create(this,this.loadBg));
+        }
+
+        loadBg(): void
+        {
+            var view:ui.gameUI.room.FriedTeaRoomUI = new ui.gameUI.room.FriedTeaRoomUI();
+            view.name = "friedTeaLayerBg";
+            if(!this.getChildByName("friedTeaLayerBg"))
+                this.addChildAt(view,0);
+        }
+
+        /**
+         * 添加炒锅视图
+         */
+        addFriedTeaView():void
+        {
+            Laya.stage.addChildAt(this,0);
+            controllers.friedRoom.pot.PotCtrl.getInstance().request_getFarmPot();
+            controllers.friedRoom.pot.PotCtrl.friedPotView.pos(195,200);
+            this.addChild(controllers.friedRoom.pot.PotCtrl.friedPotView);
+        }
+
+    }
+}
+
+

@@ -1,0 +1,155 @@
+{
+    "frames": {
+        "gossip-1.png": {
+            "frame": {
+                "h": 99,
+                "idx": 0,
+                "w": 151,
+                "x": 0,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 99,
+                "w": 151
+            },
+            "spriteSourceSize": {
+                "h": 99,
+                "w": 151,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "gossip-2.png": {
+            "frame": {
+                "h": 99,
+                "idx": 0,
+                "w": 151,
+                "x": 0,
+                "y": 100
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 99,
+                "w": 151
+            },
+            "spriteSourceSize": {
+                "h": 99,
+                "w": 151,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "gossip-3.png": {
+            "frame": {
+                "h": 99,
+                "idx": 0,
+                "w": 151,
+                "x": 152,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 99,
+                "w": 151
+            },
+            "spriteSourceSize": {
+                "h": 99,
+                "w": 151,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "gossip-4.png": {
+            "frame": {
+                "h": 99,
+                "idx": 0,
+                "w": 151,
+                "x": 304,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 99,
+                "w": 151
+            },
+            "spriteSourceSize": {
+                "h": 99,
+                "w": 151,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "gossip-5.png": {
+            "frame": {
+                "h": 99,
+                "idx": 0,
+                "w": 151,
+                "x": 152,
+                "y": 100
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 99,
+                "w": 151
+            },
+            "spriteSourceSize": {
+                "h": 99,
+                "w": 151,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "gossip-6.png": {
+            "frame": {
+                "h": 90,
+                "idx": 0,
+                "w": 137,
+                "x": 304,
+                "y": 100
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 90,
+                "w": 137
+            },
+            "spriteSourceSize": {
+                "h": 90,
+                "w": 137,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "pot__willDel.png": {
+            "frame": {
+                "h": 93,
+                "idx": 0,
+                "w": 100,
+                "x": 304,
+                "y": 191
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 93,
+                "w": 100
+            },
+            "spriteSourceSize": {
+                "h": 93,
+                "w": 100,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        }
+    },
+    "meta": {
+        "image": "gossip.png",
+        "prefix": "gameUI/gossip/"
+    }
+}

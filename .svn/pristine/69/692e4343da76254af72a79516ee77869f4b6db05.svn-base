@@ -1,0 +1,67 @@
+namespace views.friendList
+{
+
+    import SinglePersonUI = ui.gameUI.friendList.SinglePersonUI;
+	/**
+	 * 添加好友弹窗面板
+	 */
+	export class AddFriendDialogView extends ui.gameUI.friendList.SearchPalsUI
+	{
+
+		// 图片路径
+        imgPath:string="gameUI/friendList/";
+        //图片后缀名
+        imgSuffix:string=".png";
+
+		constructor()
+		{
+			super();
+			this.cacheAs = "bitmap";
+			this.dragArea = `0,0,${this.width},60`;
+            this.closeBtn.on(Laya.Event.CLICK,this,this.cancleBtnFn);
+		}
+
+        addNewPalInfo(newPalInfoVOArr:Array<any>):void{
+            if(!newPalInfoVOArr)
+                return;
+                this.gridContainer.removeChildren(0,this.gridContainer.numChildren-1);
+                let len:number = newPalInfoVOArr.length;
+                let i:number;
+                let userVO:models.friendList.FriendInfoVO;
+                for(i=0; i<len; i++)
+                {
+                    userVO = newPalInfoVOArr[i];
+                    let gridItem:SinglePersonUI = new SinglePersonUI();
+                    let cbSkin:string=this.imgPath+"checkbox1"+this.imgSuffix;
+                    let cb:Laya.CheckBox=new Laya.CheckBox(cbSkin);
+                    gridItem.addChild(cb);
+                    cb.pos(181,12);
+                    cb.size(20,20);
+                    cb.selected=true;
+                    gridItem.name = (i+1)+"";
+                    this.firstPage.text=1+"";
+                    this.pageNums.text=userVO.pageNums;
+                    gridItem.orderBg.skin=this.imgPath+"love"+this.imgSuffix;
+                    gridItem.orderNum.text=userVO.level+"";
+                    gridItem.headPic.skin=userVO.imgurl;
+                    gridItem.personName.text=userVO.userName;
+                    gridItem.statusPic.visible=false;
+                    gridItem.x =10;
+                    gridItem.y=i*(gridItem.height+3);
+                    // 最多显示7小项
+                    if(i < 7)
+                        this.gridContainer.addChild(gridItem);
+
+                    cb.on(Laya.Event.CLICK,this,this.selectItem,[userVO]);
+            }
+        }
+
+        selectItem(user:models.friendList.FriendInfoVO):void{
+
+        }
+
+		cancleBtnFn():void{
+            this.removeSelf();
+        }
+	}
+}

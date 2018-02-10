@@ -1,0 +1,176 @@
+{
+    "frames": {
+        "blackLandBg.png": {
+            "frame": {
+                "h": 77,
+                "idx": 0,
+                "w": 140,
+                "x": 0,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 77,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "h": 77,
+                "w": 140,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "commonLandBg.png": {
+            "frame": {
+                "h": 77,
+                "idx": 0,
+                "w": 140,
+                "x": 141,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 77,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "h": 77,
+                "w": 140,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "dryBlackLandBg.png": {
+            "frame": {
+                "h": 77,
+                "idx": 0,
+                "w": 140,
+                "x": 0,
+                "y": 78
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 77,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "h": 77,
+                "w": 140,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "dryCommonLandBg.png": {
+            "frame": {
+                "h": 77,
+                "idx": 0,
+                "w": 140,
+                "x": 141,
+                "y": 78
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 77,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "h": 77,
+                "w": 140,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "dryRedLandBg.png": {
+            "frame": {
+                "h": 77,
+                "idx": 0,
+                "w": 140,
+                "x": 0,
+                "y": 156
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 77,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "h": 77,
+                "w": 140,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "redLandBg.png": {
+            "frame": {
+                "h": 77,
+                "idx": 0,
+                "w": 140,
+                "x": 0,
+                "y": 234
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 77,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "h": 77,
+                "w": 140,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "unUseLandBg.png": {
+            "frame": {
+                "h": 77,
+                "idx": 0,
+                "w": 140,
+                "x": 141,
+                "y": 156
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 77,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "h": 77,
+                "w": 140,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "unUseLandTipBg.png": {
+            "frame": {
+                "h": 75,
+                "idx": 0,
+                "w": 74,
+                "x": 141,
+                "y": 234
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 75,
+                "w": 74
+            },
+            "spriteSourceSize": {
+                "h": 75,
+                "w": 74,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        }
+    },
+    "meta": {
+        "image": "land.png",
+        "prefix": "gameUI/land/"
+    }
+}

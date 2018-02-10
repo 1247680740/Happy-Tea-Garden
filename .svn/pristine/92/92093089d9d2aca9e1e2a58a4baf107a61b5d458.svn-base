@@ -1,0 +1,407 @@
+{
+    "frames": {
+        "background.png": {
+            "frame": {
+                "h": 110,
+                "idx": 0,
+                "w": 221,
+                "x": 0,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 110,
+                "w": 221
+            },
+            "spriteSourceSize": {
+                "h": 110,
+                "w": 221,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "correct_btn.png": {
+            "frame": {
+                "h": 49,
+                "idx": 0,
+                "w": 101,
+                "x": 0,
+                "y": 202
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 49,
+                "w": 101
+            },
+            "spriteSourceSize": {
+                "h": 49,
+                "w": 101,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "error_btn.png": {
+            "frame": {
+                "h": 49,
+                "idx": 0,
+                "w": 101,
+                "x": 102,
+                "y": 202
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 49,
+                "w": 101
+            },
+            "spriteSourceSize": {
+                "h": 49,
+                "w": 101,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "font_btn.png": {
+            "frame": {
+                "h": 26,
+                "idx": 0,
+                "w": 90,
+                "x": 204,
+                "y": 228
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 26,
+                "w": 90
+            },
+            "spriteSourceSize": {
+                "h": 26,
+                "w": 90,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "grading_four.png": {
+            "frame": {
+                "h": 90,
+                "idx": 0,
+                "w": 90,
+                "x": 0,
+                "y": 111
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 90,
+                "w": 90
+            },
+            "spriteSourceSize": {
+                "h": 90,
+                "w": 90,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "grading_one.png": {
+            "frame": {
+                "h": 90,
+                "idx": 0,
+                "w": 90,
+                "x": 91,
+                "y": 111
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 90,
+                "w": 90
+            },
+            "spriteSourceSize": {
+                "h": 90,
+                "w": 90,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "grading_three.png": {
+            "frame": {
+                "h": 90,
+                "idx": 0,
+                "w": 90,
+                "x": 182,
+                "y": 111
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 90,
+                "w": 90
+            },
+            "spriteSourceSize": {
+                "h": 90,
+                "w": 90,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "grading_two.png": {
+            "frame": {
+                "h": 90,
+                "idx": 0,
+                "w": 90,
+                "x": 222,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 90,
+                "w": 90
+            },
+            "spriteSourceSize": {
+                "h": 90,
+                "w": 90,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "noPass_btn.png": {
+            "frame": {
+                "h": 56,
+                "idx": 0,
+                "w": 94,
+                "x": 273,
+                "y": 114
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 56,
+                "w": 94
+            },
+            "spriteSourceSize": {
+                "h": 56,
+                "w": 94,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "perfect_btn.png": {
+            "frame": {
+                "h": 56,
+                "idx": 0,
+                "w": 94,
+                "x": 368,
+                "y": 114
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 56,
+                "w": 94
+            },
+            "spriteSourceSize": {
+                "h": 56,
+                "w": 94,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "radio.png": {
+            "frame": {
+                "h": 42,
+                "idx": 0,
+                "w": 14,
+                "x": 466,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 42,
+                "w": 14
+            },
+            "spriteSourceSize": {
+                "h": 42,
+                "w": 14,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "radioButton (2.0).png": {
+            "frame": {
+                "h": 80,
+                "idx": 0,
+                "w": 20,
+                "x": 429,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 80,
+                "w": 20
+            },
+            "spriteSourceSize": {
+                "h": 80,
+                "w": 20,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "radioButton.png": {
+            "frame": {
+                "h": 80,
+                "idx": 0,
+                "w": 20,
+                "x": 408,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 80,
+                "w": 20
+            },
+            "spriteSourceSize": {
+                "h": 80,
+                "w": 20,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "score.png": {
+            "frame": {
+                "h": 56,
+                "idx": 0,
+                "w": 94,
+                "x": 368,
+                "y": 171
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 56,
+                "w": 94
+            },
+            "spriteSourceSize": {
+                "h": 56,
+                "w": 94,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "score_1.png": {
+            "frame": {
+                "h": 56,
+                "idx": 0,
+                "w": 94,
+                "x": 273,
+                "y": 171
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 56,
+                "w": 94
+            },
+            "spriteSourceSize": {
+                "h": 56,
+                "w": 94,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "score_2.png": {
+            "frame": {
+                "h": 56,
+                "idx": 0,
+                "w": 94,
+                "x": 313,
+                "y": 57
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 56,
+                "w": 94
+            },
+            "spriteSourceSize": {
+                "h": 56,
+                "w": 94,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "score_3.png": {
+            "frame": {
+                "h": 56,
+                "idx": 0,
+                "w": 94,
+                "x": 313,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 56,
+                "w": 94
+            },
+            "spriteSourceSize": {
+                "h": 56,
+                "w": 94,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "testfont_btn.png": {
+            "frame": {
+                "h": 26,
+                "idx": 0,
+                "w": 90,
+                "x": 295,
+                "y": 228
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 26,
+                "w": 90
+            },
+            "spriteSourceSize": {
+                "h": 26,
+                "w": 90,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "yes.png": {
+            "frame": {
+                "h": 26,
+                "idx": 0,
+                "w": 79,
+                "x": 386,
+                "y": 228
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 26,
+                "w": 79
+            },
+            "spriteSourceSize": {
+                "h": 26,
+                "w": 79,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        }
+    },
+    "meta": {
+        "image": "exam.png",
+        "prefix": "gameUI/exam/"
+    }
+}

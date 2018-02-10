@@ -1,0 +1,50 @@
+{
+    "frames": {
+        "down_left.png": {
+            "frame": {
+                "h": 74,
+                "idx": 0,
+                "w": 133,
+                "x": 0,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 74,
+                "w": 133
+            },
+            "spriteSourceSize": {
+                "h": 74,
+                "w": 133,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "down_right.png": {
+            "frame": {
+                "h": 74,
+                "idx": 0,
+                "w": 133,
+                "x": 0,
+                "y": 75
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 74,
+                "w": 133
+            },
+            "spriteSourceSize": {
+                "h": 74,
+                "w": 133,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        }
+    },
+    "meta": {
+        "image": "teaWiki.png",
+        "prefix": "gameUI/teaWiki/"
+    }
+}

@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8' />
+	<title>开心茶园</title>
+	<meta name='viewport' content='width=device-width,initial-scale=1.0,user-scalable=yes'/>
+	<!--
+	<meta name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+	/> -->
+	<meta name='apple-mobile-web-app-capable' content='yes' />
+	<meta name='full-screen' content='true' />
+	<meta name='screen-orientation' content='portrait' />
+	<meta name='x5-fullscreen' content='true' />
+	<meta name='360-fullscreen' content='true' />
+	<meta http-equiv='expires' content='0' />
+</head>
+
+<body>
+	<!-- Protobuf -->
+	<!--<script type="text/javascript" src="libs/bytebuffer.js"></script>
+    <script type="text/javascript" src="libs/protobuf.js"></script>-->
+
+	<!--核心包，封装了显示对象渲染，事件，时间管理，时间轴动画，缓动，消息交互,socket，本地存储，鼠标触摸，声音，加载，颜色滤镜，位图字体等-->
+	<script type="text/javascript" src="libs/laya.core.js"></script>
+	<!--封装了webgl渲染管线，如果使用webgl渲染，可以在初始化时调用Laya.init(1000,800,laya.webgl.WebGL);-->
+    <script type="text/javascript" src="libs/laya.webgl.js"></script>
+	<!--是动画模块，包含了swf动画，骨骼动画等-->
+    <script type="text/javascript" src="libs/laya.ani.js"></script>
+	<!--包含更多webgl滤镜，比如外发光，阴影，模糊以及更多-->
+    <script type="text/javascript" src="libs/laya.filter.js"></script>
+	<!--封装了html动态排版功能-->
+    <script type="text/javascript" src="libs/laya.html.js"></script>
+	<!--粒子类库-->
+    <script type="text/javascript" src="libs/laya.particle.js"></script>
+	<!--提供tileMap解析支持-->
+    <script type="text/javascript" src="libs/laya.tiledmap.js"></script>
+	<!--提供了制作UI的各种组件实现-->
+    <script type="text/javascript" src="libs/laya.ui.js"></script>
+    <!-- 提供的调试工具 -->
+    <script type="text/javascript" src="libs/laya.debugtool.js"></script>
+	<!-- 物理引擎matter.js -->
+	<!--<script type="text/javascript" src="libs/matter.js"></script>
+	<script type="text/javascript" src="libs/matter-RenderLaya.js"></script>-->
+
+	<!--用户自定义顺序文件添加到这里-->
+	<!--jsfile--Custom-->
+	<!--jsfile--Custom-->
+	<!--自定义的js(src文件夹下)文件自动添加到下面jsfile模块标签里面里-->
+	<!--删除标签，ide不会自动添加js文件，请谨慎操作-->
+	<!--jsfile--startTag-->
+	<script src="js/views/common/CommonDisplay.js"></script>
+	<script src="js/utils/TweenUtil.js"></script>
+	<script src="js/utils/TimerUtil.js"></script>
+	<script src="js/utils/PotTimerUtil.js"></script>
+	<script src="js/utils/Hash.js"></script>
+	<script src="js/utils/CommonUtil.js"></script>
+	<script src="js/utils/ArrayUtil.js"></script>
+	<script src="js/nets/ResponseServer.js"></script>
+	<script src="js/nets/HttpServiceProxy.js"></script>
+	<script src="js/models/teaWiki/TeaWikiModel.js"></script>
+	<script src="js/models/teaWiki/TeaWikiInfoVO.js"></script>
+	<script src="js/models/teaRoom/TeaGardenModel.js"></script>
+	<script src="js/models/teaRoom/storage/StorageModel.js"></script>
+	<script src="js/models/teaRoom/shop/ShopModel.js"></script>
+	<script src="js/models/teaRoom/LandVO.js"></script>
+	<script src="js/models/teaRoom/LandModel.js"></script>
+	<script src="js/models/teaRoom/crop/CropModel.js"></script>
+	<script src="js/models/teaRoom/bag/BagModel.js"></script>
+	<script src="js/models/ranklist/RankListMode.js"></script>
+	<script src="js/models/player/PlayerInfoVO.js"></script>
+	<script src="js/models/player/PlayerInfoModel.js"></script>
+	<script src="js/models/player/FriendInfoVO.js"></script>
+	<script src="js/models/makeRoom/storage/MakeTeaStorageModel.js"></script>
+	<script src="js/models/makeRoom/shop/MakeTeaHomeShopModel.js"></script>
+	<script src="js/models/makeRoom/MakeTeaHomeModel.js"></script>
+	<script src="js/models/makeRoom/MakeTeaDialogModel.js"></script>
+	<script src="js/models/friendList/FriendListModel.js"></script>
+	<script src="js/models/friendList/FriendInfoVO.js"></script>
+	<script src="js/models/friendList/AddFriendDialogModel.js"></script>
+	<script src="js/models/friedRoom/storage/FriedTeaStorageModel.js"></script>
+	<script src="js/models/friedRoom/shop/FriedTeaHomeShopModel.js"></script>
+	<script src="js/models/friedRoom/pot/UpGradePotModel.js"></script>
+	<script src="js/models/friedRoom/pot/PotVO.js"></script>
+	<script src="js/models/friedRoom/pot/PotModel.js"></script>
+	<script src="js/models/friedRoom/pot/IntensifyPotModel.js"></script>
+	<script src="js/models/friedRoom/pot/FriedTeaDialogModel.js"></script>
+	<script src="js/models/friedRoom/bag/FireTeaBagModel.js"></script>
+	<script src="js/models/exam/QuestionDialogModel.js"></script>
+	<script src="js/models/exam/ExamInfoVO.js"></script>
+	<script src="js/models/exam/ExamDialogModel.js"></script>
+	<script src="js/models/base/ToolVO.js"></script>
+	<script src="js/models/base/TeaGardenVO.js"></script>
+	<script src="js/models/base/SeedVO.js"></script>
+	<script src="js/models/base/PotVO.js"></script>
+	<script src="js/models/base/CropVO.js"></script>
+	<script src="js/models/activity/ActivityModel.js"></script>
+	<script src="js/managers/UILayerManager.js"></script>
+	<script src="js/managers/TipLayerManager.js"></script>
+	<script src="js/managers/SceneLayerManager.js"></script>
+	<script src="js/managers/ResourceManager.js"></script>
+	<script src="js/controllers/teaWiki/TeaWikiCtrl.js"></script>
+	<script src="js/controllers/teaRoom/TeaGardenCtrl.js"></script>
+	<script src="js/controllers/teaRoom/storage/StorageCtrl.js"></script>
+	<script src="js/controllers/teaRoom/shop/ShopCtrl.js"></script>
+	<script src="js/controllers/teaRoom/LandCtrl.js"></script>
+	<script src="js/controllers/teaRoom/crop/CropCtrl.js"></script>
+	<script src="js/controllers/teaRoom/bag/BagCtrl.js"></script>
+	<script src="js/controllers/ranklist/RankListCtrl.js"></script>
+	<script src="js/controllers/player/PlayerInfoCtrl.js"></script>
+	<script src="js/controllers/makeRoom/storage/MakeTeaStorageCtrl.js"></script>
+	<script src="js/controllers/makeRoom/shop/MakeTeaHomeShopCtrl.js"></script>
+	<script src="js/controllers/makeRoom/MakeTeaDialogCtrl.js"></script>
+	<script src="js/controllers/friendList/FriendListCtrl.js"></script>
+	<script src="js/controllers/friendList/AddFriendDialogCtrl.js"></script>
+	<script src="js/controllers/friedRoom/storage/FriedTeaStorageCtrl.js"></script>
+	<script src="js/controllers/friedRoom/shop/FriedTeaHomeShopCtrl.js"></script>
+	<script src="js/controllers/friedRoom/pot/UpGradePotCtrl.js"></script>
+	<script src="js/controllers/friedRoom/pot/PotCtrl.js"></script>
+	<script src="js/controllers/friedRoom/pot/IntensifyPotCtrl.js"></script>
+	<script src="js/controllers/friedRoom/pot/FriedTeaDialogCtrl.js"></script>
+	<script src="js/controllers/friedRoom/bag/FireTeaBagCtrl.js"></script>
+	<script src="js/controllers/exam/QuestionDialogCtrl.js"></script>
+	<script src="js/controllers/exam/ExamDialogCtrl.js"></script>
+	<script src="js/controllers/activity/ActivityTipCtrl.js"></script>
+	<script src="js/configs/IdentityConfig.js"></script>
+	<script src="js/configs/HttpConfig.js"></script>
+	<script src="js/configs/GameConfig.js"></script>
+	<script src="js/commons/CommonEventConst.js"></script>
+	<script src="js/commons/resLoad/ResLoader.js"></script>
+	<script src="js/nets/HttpService.js"></script>
+	<script src="js/ui/layaUI.max.all.js"></script>
+	<script src="js/views/activity/ActivityTipView.js"></script>
+	<script src="js/views/base/IBaseView.js"></script>
+	<script src="js/views/base/BaseView.js"></script>
+	<script src="js/views/common/ConfirmCancelTipView.js"></script>
+	<script src="js/views/common/DrawBgTip.js"></script>
+	<script src="js/views/common/Loading.js"></script>
+	<script src="js/views/exam/ExamDialogView.js"></script>
+	<script src="js/views/exam/QuestionDialogView.js"></script>
+	<script src="js/views/friedRoom/bag/FireTeaBagDialogView.js"></script>
+	<script src="js/views/friedRoom/pot/AssartPotTipView.js"></script>
+	<script src="js/views/friedRoom/pot/FriedPotView.js"></script>
+	<script src="js/views/friedRoom/pot/FriedTeaDialogView.js"></script>
+	<script src="js/views/friedRoom/pot/IntensifyPotView.js"></script>
+	<script src="js/views/friedRoom/pot/PotGridView.js"></script>
+	<script src="js/views/friedRoom/pot/UpGradePotView.js"></script>
+	<script src="js/views/friedRoom/shop/FriedTeaShopDialogView.js"></script>
+	<script src="js/views/friedRoom/storage/FriedTeaStorageView.js"></script>
+	<script src="js/views/friedRoom/toolBar/FireTeaHome_DownToolBarView.js"></script>
+	<script src="js/views/friedRoom/toolBar/FireTeaHome_RightDownToolBarView.js"></script>
+	<script src="js/views/friendList/AddFriendDialogView.js"></script>
+	<script src="js/views/friendList/ApplyPalsDialogView.js"></script>
+	<script src="js/views/friendList/FriendCropView.js"></script>
+	<script src="js/views/friendList/FriendLandGridView.js"></script>
+	<script src="js/views/friendList/FriendLandView.js"></script>
+	<script src="js/views/friendList/FriendListView.js"></script>
+	<script src="js/views/friendList/FriendList_DownToolBarView.js"></script>
+	<script src="js/views/friendList/FriendList_DownToolBoxView.js"></script>
+	<script src="js/views/friendList/FriendTeaGardenView.js"></script>
+	<script src="js/views/friendList/RecomPalsDialogView.js"></script>
+	<script src="js/views/layers/FriedTeaHomeLayer.js"></script>
+	<script src="js/views/layers/FriedTeaUILayer.js"></script>
+	<script src="js/views/layers/FriendSceneLayer.js"></script>
+	<script src="js/views/layers/FriendUILayer.js"></script>
+	<script src="js/views/layers/MakeTeaUILayer.js"></script>
+	<script src="js/views/layers/SceneLayer.js"></script>
+	<script src="js/views/layers/SceneUILayer.js"></script>
+	<script src="js/views/layers/TipLayer.js"></script>
+	<script src="js/views/layers/UILayer.js"></script>
+	<script src="js/views/makeRoom/MakeTeaDialogView.js"></script>
+	<script src="js/views/makeRoom/MakeTeaHomeLayer.js"></script>
+	<script src="js/views/makeRoom/shop/MakeTeaShopDialogView.js"></script>
+	<script src="js/views/makeRoom/storage/MakeTeaStorageView.js"></script>
+	<script src="js/views/makeRoom/toolBar/MakeTeaHome_DownToolBarView.js"></script>
+	<script src="js/views/makeRoom/toolBar/MakeTeaHome_RightDownToolBarView.js"></script>
+	<script src="js/views/player/FriendInfoView.js"></script>
+	<script src="js/views/player/PlayerInfoView.js"></script>
+	<script src="js/views/ranklist/RankListView.js"></script>
+	<script src="js/views/teaRoom/bag/BagDialogView.js"></script>
+	<script src="js/views/teaRoom/crop/CropView.js"></script>
+	<script src="js/views/teaRoom/LandGridView.js"></script>
+	<script src="js/views/teaRoom/LandView.js"></script>
+	<script src="js/views/teaRoom/shop/ShopDialogView.js"></script>
+	<script src="js/views/teaRoom/storage/StorageDialogView.js"></script>
+	<script src="js/views/teaRoom/TeaGardenView.js"></script>
+	<script src="js/views/teaRoom/toolBar/DownToolBarView.js"></script>
+	<script src="js/views/teaRoom/toolBar/DownToolBoxView.js"></script>
+	<script src="js/views/teaRoom/toolBar/RightDownToolBarView.js"></script>
+	<script src="js/views/teaWiki/TeaWikiView.js"></script>
+	<!--jsfile--endTag-->
+
+
+	<script>
+		// 判断是否为PC端
+        function isPC()
+        {
+            var userAgentInfo = navigator.userAgent;
+            var agents = ["Android", "iPhone","SymbianOS", "Windows Phone","iPad", "iPod"];
+            var flag = true;
+            for (var i = 0; i < agents.length; i++)
+            {
+                if (userAgentInfo.indexOf(agents[i]) > 0)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+	</script>
+
+	<!--启动类添加到这里-->
+	<!--jsfile--Main-->
+	<script src="js/GameMain.js"></script>
+	<!--jsfile--Main-->
+
+
+</body>
+
+</html>

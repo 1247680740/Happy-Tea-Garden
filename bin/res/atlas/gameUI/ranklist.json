@@ -1,0 +1,155 @@
+{
+    "frames": {
+        "close.png": {
+            "frame": {
+                "h": 37,
+                "idx": 0,
+                "w": 37,
+                "x": 0,
+                "y": 65
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 37,
+                "w": 37
+            },
+            "spriteSourceSize": {
+                "h": 37,
+                "w": 37,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "no1.png": {
+            "frame": {
+                "h": 24,
+                "idx": 0,
+                "w": 25,
+                "x": 0,
+                "y": 103
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 24,
+                "w": 25
+            },
+            "spriteSourceSize": {
+                "h": 24,
+                "w": 25,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "no2.png": {
+            "frame": {
+                "h": 24,
+                "idx": 0,
+                "w": 25,
+                "x": 26,
+                "y": 103
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 24,
+                "w": 25
+            },
+            "spriteSourceSize": {
+                "h": 24,
+                "w": 25,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "no3.png": {
+            "frame": {
+                "h": 23,
+                "idx": 0,
+                "w": 23,
+                "x": 38,
+                "y": 65
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 23,
+                "w": 23
+            },
+            "spriteSourceSize": {
+                "h": 23,
+                "w": 23,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "selectedPageNum.png": {
+            "frame": {
+                "h": 20,
+                "idx": 0,
+                "w": 20,
+                "x": 52,
+                "y": 89
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 20,
+                "w": 20
+            },
+            "spriteSourceSize": {
+                "h": 20,
+                "w": 20,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "selectedTabBg.png": {
+            "frame": {
+                "h": 36,
+                "idx": 0,
+                "w": 250,
+                "x": 0,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 36,
+                "w": 250
+            },
+            "spriteSourceSize": {
+                "h": 36,
+                "w": 250,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "unselectedTabBg.png": {
+            "frame": {
+                "h": 27,
+                "idx": 0,
+                "w": 250,
+                "x": 0,
+                "y": 37
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 27,
+                "w": 250
+            },
+            "spriteSourceSize": {
+                "h": 27,
+                "w": 250,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        }
+    },
+    "meta": {
+        "image": "ranklist.png",
+        "prefix": "gameUI/ranklist/"
+    }
+}

@@ -1,0 +1,31 @@
+// {
+//     "compilerOptions": {
+//         "module": "commonjs",
+//         "target": "es5",
+//         "noImplicitAny": false,
+//         "sourceMap": true,
+//         "allowJs": true
+//     },
+//     "exclude": [
+//         "node_modules"
+//     ]
+// }
+
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "sourceMap": true,
+        "rootDir": "./src",
+        "outDir": "./bin/js",
+        "watch": true
+    },
+    "exclude": [
+        "node_modules",
+        "bower_components",
+        "jspm_packages",
+        "tmp",
+        "temp",
+        "bin"
+    ]
+}
